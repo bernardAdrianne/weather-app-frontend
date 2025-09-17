@@ -18,7 +18,7 @@
     }
 
     try {
-      const res = await fetch(`http://localhost:3000/api/weather/${get(query)}`);
+      const res = await fetch(`https://weather-app-backend-1-pe5e.onrender.com/api/weather/${get(query)}`);
       if (!res.ok) throw new Error("City not found");
 
       weatherData.set(await res.json());
@@ -46,7 +46,7 @@
   }
 </script>
 
-<section class="flex items-center p-4 backdrop-blur-md shadow-md transition-colors duration-500"
+<section class="flex items-center justify-between p-4 backdrop-blur-md shadow-md transition-colors duration-500"
   style="background-color: {headerColor}">
                 
   <!-- Search Icon -->
@@ -66,6 +66,8 @@
       d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
     />
   </svg>
+
+  <h1 class="font-bold text-xl text-black">WetheringWyou</h1>
 </section>
 
 <!-- Full-Screen Search Bar -->
